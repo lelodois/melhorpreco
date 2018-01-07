@@ -1,0 +1,18 @@
+- Quando o usuário digitar a quantidade de cada produto e clicar no botão Enviar, 
+o sistema deverá chamar uma API https://egf1amcv33.execute-api.us-east-1.amazonaws.com/dev/produto/{{gtin}} 
+informando o GTIN de cada produto. O retorno da API será uma lista de FORNECEDORES e dentro de cada fornecedor 
+uma lista de PREÇOS de acordo com a QUANTIDADE MÍNIMA PARA COMPRA.
+
+- Não é obrigatório informar a quantidade para todos os produtos.
+
+- O sistema deve selecionar o melhor fornecedor para compra de cada produto considerando o menor preço que 
+atenda a quantidade mínima de compra. Em seguida, deverá agrupar os produtos de um mesmo fornecedor e 
+criar um pedido para cada um. 
+
+- Caso nenhum fornecedor atenda a quantidade mínima, o sistema deverá retornar uma mensagem informando o usuário e 
+não deve criar nenhum pedido.
+
+- O pedido deve ter um fornecedor e uma lista dos itens comprados. Caso o fornecedor retornado pela API ainda não 
+esteja cadastrado, o sistema deverá inclui-lo para poder vincular com o pedido.
+
+- O sistema também deverá possuir uma rota para listar todos os pedidos criados até o momento.
