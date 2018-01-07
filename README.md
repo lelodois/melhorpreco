@@ -1,8 +1,6 @@
 # Melhor Preco
 Descobre o melhor preço disponível
 
-É uma api REST que disponibiliza serviços de campanha, usuario e associação dos mesmos.
-
 ## Arquitetura
 
 * RestAPI
